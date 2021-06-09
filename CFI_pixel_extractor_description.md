@@ -30,26 +30,6 @@ Parameter 8) This is where you can specify the folder with your images. The simp
              analyze them, and then move them to a permamanet folder. That way, you do not need to ever change the program itself.
              *This program requies '/' for directory, although directory in Window uses '\'. 
 
- 
-ONLY A FEW PARAMETERS SHOULD BE ADJUST BY USERS. ALL NEAR THE BOTTOM OF THE PROGRAM:
-    IN PxEx(0, 3000000, 1, '/*.jpg', 20, 90, 'C:/Pics/Canopy/test.csv', 'C:/Pics/Canopy') (line 141) 
-    THE FIRST AND SECOND PARAMETER ARE MINIMUM AND MAXIMUM PIXEL NUMBER TO BE ANALYZED IN THE PROGRAM. 
-    THE 3RD VALUE IS A CALIBRATION FACTOR (PIXEL SIZE OF A KNOWN DISTANCE) TO CONVERT PIXELS TO AREA, 
-    THE 4TH PARAMETER IS FORMAT OF IMAGES THAT USER HAVE TO SPECIFY THE EXTENSION OF YOUR IMAGES (Note: that JPEG and JPG are different!),
-    THE 5TH and 6TH VALUES ARE VALUES TO GET MINIMUM PIXEL INTENSITY (See the pragraph in line 37 to change the default values),
-        C:/Pics/Canopy/test.csv IS THE NAME OF THE OUTPUT FILE (ONLY CSV FORMAT ALLOWED IN THE PROGRAM),
-        AND C:/Pics/Canopy IS THE FOLDER THAT CONTAINS THE IMAGES. NOTE: VERY LONG FOLDER NAMES MAY CAUSE PROBLEMS!
-    THE PIXEL INTENSITY RANGE MAY NEED TO BE ADJUSTED TO LOOK FOR THE OPTIMAL THRESHOLD BETWEEN BACKGROUND AND CANOPY
-    THE BEST RANGE DEPENDS ON PICTURE QUALITY. IF THE BACKGROUND IS VERY DARK TO MINIMUM VALUE (50 IS THE EXAMPLE BELOW) MAY NEED TO BE LOWERED.  
-    IF NEEDED, ADJUST THAT VALUE (line 141) IN BOTH INSTANCES IN THE INSTRUCTION BELOW. SO FAR I HAVE NOT SEEN EXAMPLES WHERE THE UPPER PART OF THE RANGE
-    NEEDS TO BE ADJUSTED, BUT IF THE CANOPY IS VERY BRIGHT, THE '90' CAN BE INCREASEDE TO A HIGHER VALUE.
-    WHETHER THE RANGE FOR THRESHOLDING NEEDS TO BE ADJUSTED CAN EASILY BE SEEN BY COMPARING THE ORIGINAL IMAGES WITH THE BINARY IMAGES THAT GET CREATED 
-      (IN THE SAME FOLDER AS THE ORIGNAL IMAGES)
-      e.g.) minThr = 50 + np.argmin(Hist[50:90]) 
-
-     THE OUTPUT FILE GETS WRITTEN TO THE SAME DIRECTORY AS WHERE THE PROGRAM IS SAVED. NOT SURE HOW TO CHANGE THAT. OUTPUTY ALSO GETS WRITTEN TO CONSOLE (BOTTOM RIGHT WINDOW)
- 
- 
 11/10/2020 Update: the program now automatically determines the optimal pixel intensity threshold to separate canopy from beackground. Background has low pixel intensity, canopy has a higher intensity.
 The program now looks for a local minimum in the pixel intensity histogram in the intensity range from 20 to 90 (user adjustable in the line 141).
 
