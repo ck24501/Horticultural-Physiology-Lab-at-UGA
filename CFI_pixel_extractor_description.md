@@ -20,12 +20,17 @@ Output: Integrated pixel number of plants (or a plant) from an image, a csv file
 Instruction to fill parameters:           
 Parameter 1 and 2) The first two values, set the lower and upper boundaries of the pixel size of individual objects in the image that are 
                    included in the pixel count. This can be used to remove background noise. 
+                   
 Parameter 3) This is a calibration to convert pixels to area. If you don't know that value yet (typical) leave this at 1 and convert later in Excel
+
 Parameter 4) This is the format of your image. You can change jpg (default now) as any other format.
+
 Parameter 5 and 6) They are the minimum and maximum values for adjusting threshold. 
           e.g.: minThr = 20 + np.argmin(Hist[20:90]); 20 is an example minimum value when the background is dark
           Users can change the values to find the best values for images (see line 37 for the detail); No change 90 unless your canopy is very bright 
+          
 Parameter 7) The name of output file (only csv format allowed) that writes all numbers getting from the program
+
 Parameter 8) This is where you can specify the folder with your images. The simple solution is to always put your images in the same folder,
              analyze them, and then move them to a permamanet folder. That way, you do not need to ever change the program itself.
              *This program requies '/' for directory, although directory in Window uses '\'. 
