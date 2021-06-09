@@ -138,4 +138,4 @@ def PxEx(minPxs, maxPxs, calibrator, imageformat, Histmin, Histmax, csvname, dir
 #              *This program requies '/' for directory, although directory in Window uses '\'. 
 '''
 
-PxEx(10, 3000000, 1, '/*.png', 20, 70, 'C:/Users/Username/Downloads/Pxex_example/result.csv', 'C:/Users/Username/Downloads/Pxex_example')
+PxEx(10, 3000000, 1, '/*.png', 20, 100, 'C:/Users/Username/Downloads/Pxex_example/result.csv', 'C:/Users/Username/Downloads/Pxex_example')
