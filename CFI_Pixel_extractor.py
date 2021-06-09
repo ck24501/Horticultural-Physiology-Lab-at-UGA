@@ -110,7 +110,7 @@ def PxEx(minPxs, maxPxs, calibrator, imageformat, Histmin, Histmax, csvname, dir
         
         #Generate thresholded two channel images along with their original filename
         cv2.imwrite(str(fname)+"_filterd.png",result) #Save a masked image
-        plt.plot(Hist), plt.yscale('log'), plt.savefig(str(fname)+"_histogram.png"), plt.close()
+        plt.plot(Hist),plt.yscale('log'),plt.xlabel('Intensity'),plt.ylabel('Pixel frequency'),plt.title('CFI Pixel frequency'),plt.savefig(str(fname)+"_histogram.png"),plt.close()
         #Print the histogram plot of 'gray', #Convert the y-axis of histogram in log scale, #Save the histogram plots as png files, #close the file
         pixel_number = cv2.countNonZero(result) #Count the pixel number of white (255) of the two chanel image
         area = pixel_number//(calibrator*calibrator) #Convert the pixel number as an area upon the calibrator (pixel number of a known distance)
