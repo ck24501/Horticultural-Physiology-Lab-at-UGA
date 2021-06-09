@@ -1,12 +1,11 @@
 Description for Chlrophyll fluorescence image pixel extractor
-
 ************************************************************************************************************************
 To run the program, install Anaconda (freeware). After installing Anaconda, you also need to add 'OpenCV'
 Use the Windows search to look for 'Anaconda Prompt (Anaconda 3)', type 'pip install opencv-python' to install OpenCV
-************************************************************************************************************************
 Within Anaconda Navigator run Spyder (that is different version of Python). The current version of this program works with any combinations of Python (3.7.9 ~ 3.9.1), SPYDER (4.1.4 ~ 4.2.0) and OpenCV (4.3.0~4.5.1), but has not been tested with all other versions of Python.
 Versions matter! This program may not work with other versions! To check, update or change version of Python, please read the supplemental text file!
- 
+************************************************************************************************************************
+
 @Author: Changhyeon Kim (credit to Momo from the Computational Plant Science Lab at UGA, Marc, and Lynne for adding automated thresholding)
 @E-mail: changhyeon.kim@uga.edu
 
@@ -16,8 +15,9 @@ Note: the program will automatically analyze all images in the specified folder
 User can change minimum and maximum pixel number to be analyzed within an image, an optimal pixel intensity threshold (now automated), csv filename, and folder.
  
 Output: Integrated pixel number of plants (or a plant) from an image, a csv file including the values, and processed (binary) images in the directory
- 
+************************************************************************************************************************
 Instruction to fill parameters:           
+************************************************************************************************************************
 Parameter 1 and 2) The first two values, set the lower and upper boundaries of the pixel size of individual objects in the image that are 
                    included in the pixel count. This can be used to remove background noise. 
                    
@@ -35,6 +35,7 @@ Parameter 8) This is where you can specify the folder with your images. The simp
              analyze them, and then move them to a permamanet folder. That way, you do not need to ever change the program itself.
              *This program requies '/' for directory, although directory in Window uses '\'. 
 
+************************************************************************************************************************
 11/10/2020 Update: the program now automatically determines the optimal pixel intensity threshold to separate canopy from beackground. Background has low pixel intensity, canopy has a higher intensity.
 The program now looks for a local minimum in the pixel intensity histogram in the intensity range from 20 to 90 (user adjustable in the line 141).
 
