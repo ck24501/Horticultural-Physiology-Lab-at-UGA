@@ -1,3 +1,5 @@
+Description for Chlrophyll fluorescence image pixel extractor
+
 ************************************************************************************************************************
 To run the program, install Anaconda (freeware). After installing Anaconda, you also need to add 'OpenCV'
 Use the Windows search to look for 'Anaconda Prompt (Anaconda 3)', type 'pip install opencv-python' to install OpenCV
