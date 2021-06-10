@@ -120,7 +120,7 @@ def PxEx(minPxs, maxPxs, calibrator, imageformat, Histmin, Histmax, csvname, dir
         #write the pixel numbers, area and the minimum threshold value as a given csv file name
         with open(csvname, "a", newline='') as csvfile: 
             writer = csv.writer(csvfile)
-            writer.writerow([filename, minThr, pixel_number, PCS])
+            writer.writerow([filename, minThr, pixel_number, area])
             # IF THE ABOVE LINE GIVES AN ERROR MESSAGE, REPLACE WRITEROW WITH WRITE. THE CORRECT FORMAT APPEARS TO DEPENDS ON THE VERSION OF THE OpenCV package
         csvfile.close()
 '''
