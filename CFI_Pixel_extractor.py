@@ -73,7 +73,7 @@ def PxEx(minPxs, maxPxs, calibrator, imageformat, Histmin, Histmax, csvname, dir
             fileList.remove(a)#remove these filenames from the list
     
     with open(csvname, 'w', newline='') as csvfile: #to create csv file 
-        writer = csv.DictWriter(csvfile, fieldnames = ["File name","Minimum threshold", "Pixel Number", "Area"]) #header of each column within the csv file
+        writer = csv.DictWriter(csvfile, fieldnames = ["File name","Minimum threshold", "Pixel Number", "PCS"]) #header of each column within the csv file
         writer.writeheader()
  
     for fdx, filename in enumerate(fileList): #A For loop statment: iteration from all indices (the filenames) within the folder
@@ -120,7 +120,7 @@ def PxEx(minPxs, maxPxs, calibrator, imageformat, Histmin, Histmax, csvname, dir
         #write the pixel numbers, area and the minimum threshold value as a given csv file name
         with open(csvname, "a", newline='') as csvfile: 
             writer = csv.writer(csvfile)
-            writer.writerow([filename, minThr, pixel_number, area])
+            writer.writerow([filename, minThr, pixel_number, PCS])
             # IF THE ABOVE LINE GIVES AN ERROR MESSAGE, REPLACE WRITEROW WITH WRITE. THE CORRECT FORMAT APPEARS TO DEPENDS ON THE VERSION OF THE OpenCV package
         csvfile.close()
 '''
